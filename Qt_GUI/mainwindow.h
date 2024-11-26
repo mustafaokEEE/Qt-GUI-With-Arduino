@@ -18,12 +18,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void readData();  // Arduino'dan gelen veriyi okuma fonksiyonu
-    void setupSerialPort();  // Seri port ayarlarını yapma fonksiyonu
+    void readData();  
+    void setupSerialPort();  
 
 private:
     Ui::MainWindow *ui;
-    QSerialPort *arduino;  // QSerialPort nesnesi tanımlanmalı
+    QSerialPort *arduino;  
     static const quint16 arduino_uno_vendor_id = 6790;
     static const quint16 arduino_uno_product_id = 29987;
 };
