@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Seri portu başlat
+   
     arduino = new QSerialPort(this);
     connect(arduino, &QSerialPort::readyRead, this, &MainWindow::readData);
 
@@ -60,7 +60,7 @@ void MainWindow::readData() {
     QString dataStr = QString(data);
     qDebug() << "Data received:" << dataStr;
 
-    // Veriyi ',' ile ayır
+    
     QStringList dataList = dataStr.split(",");
     foreach (const QString &value, dataList) {
         if (value.startsWith("i=")) {
