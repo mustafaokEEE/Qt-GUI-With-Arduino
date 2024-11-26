@@ -13,7 +13,7 @@ int x=0;
 unsigned long previousMillis_3 = 0;  
 const long interval_3 = 200 ;         
 int z=0;
-/////////// V / A SENSOR /////////
+
 const int currentPin = A0; 
 const int voltagePin = A1; 
 const float referenceVoltage = 5.0; 
@@ -50,7 +50,7 @@ void loop() {
   Serial.print(amper);
   }
 
-  // z değeri için
+  
   if (currentMillis - previousMillis_3 >= interval_3) {
     previousMillis_3 = currentMillis;
     
